@@ -69,3 +69,32 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+:root {
+  --color-primary: rgba(0, 184, 148, 1.0);
+  --color-secondary: rgba(9, 132, 227, 1.0);
+  --color-third: rgba(253, 203, 110, 1.0);
+  --color-background-main: #f7f7f7;
+  --color-background-secondary: rgba(45, 52, 54, 1.0);
+  --color-text-main: rgba(45, 52, 54, 1.0);
+  --color-text-secondary: #f7f7f7;
+  --color-text-danger: rgba(214, 48, 49, 1.0);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 184, 147, 0.537);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 184, 147, 0.773);
+}
