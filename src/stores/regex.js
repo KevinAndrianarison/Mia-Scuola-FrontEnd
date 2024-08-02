@@ -1,15 +1,24 @@
 import { defineStore } from 'pinia'
+import { useShow } from '@/stores/Show'
 import { ref } from 'vue'
 
 export const useRegex = defineStore('Regex', () => {
+  const show = useShow()
+
   function RegexPassword(password) {
     const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
-    let valeur = regex.test(password)
+    show.showMessageErrorMdp = !regex.test(password)
+    if (password === '') {
+      show.showMessageErrorMdp = false
+    }
   }
 
   function RegexEmail(email) {
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    let valeur = regex.test(email)
+    show.showMessageErrorEmail = !regex.test(email)
+    if (email === '') {
+      show.showMessageErrorEmail = false
+    }
   }
 
   return {

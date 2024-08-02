@@ -2,18 +2,17 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 export const useShow = defineStore('Show', () => {
-  const showHome = ref(true)
+  const showHome = ref(false)
   const showSpinner = ref(false)
   const showFirstConfig = ref(false)
   const showCreatePassword = ref(false)
   const showMessageErrorMdp = ref(false)
   const showMessageErrorConfirmMdp = ref(false)
   const showMessageErrorEmail = ref(false)
-  const showLogin = ref(false)
+  const showLogin = ref(true)
   const showVerifyPassword = ref(false)
   const showPassword = ref(false)
-
-
+  const showAdmin = ref(false)
 
   function toggleCreatePasswordVisibility() {
     showCreatePassword.value = !showCreatePassword.value
@@ -33,6 +32,7 @@ export const useShow = defineStore('Show', () => {
     showFirstConfig,
     showCreatePassword,
     showVerifyPassword,
+    showAdmin,
     showPassword,
     showLogin,
     showMessageErrorMdp,
@@ -41,6 +41,5 @@ export const useShow = defineStore('Show', () => {
     toggleCreatePasswordVisibility,
     togglePasswordVisibility,
     toggleVerifyPasswordVisibility
-
   }
 })

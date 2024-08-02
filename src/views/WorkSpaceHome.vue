@@ -15,7 +15,7 @@
         </p>
       </div>
       <div class="btn">
-        <button @click="testAnimation()">Commencer  🚀</button>
+        <button @click="testAnimation()">Commencer 🚀</button>
       </div>
     </div>
     <div class="right">
@@ -31,7 +31,6 @@ const show = useShow()
 function testAnimation() {
   show.showFirstConfig = true
   show.showHome = false
-
 }
 </script>
 

@@ -9,6 +9,9 @@
     <Transition>
       <WorkSpaceLogin v-if="show.showLogin" />
     </Transition>
+    <Transition>
+      <WorkSpaceDash v-if="show.showAdmin" />
+    </Transition>
   </div>
   <Teleport to="body">
     <Overlay />
@@ -19,6 +22,8 @@
 import WorkSpaceHome from './views/WorkSpaceHome.vue'
 import WorkSpaceFirstConfig from './views/WorkSpaceFirstConfig.vue'
 import WorkSpaceLogin from './views/WorkSpaceLogin.vue'
+import WorkSpaceDash from './views/WorkSpaceDash.vue'
+
 import Overlay from './components/Overlay.vue'
 
 import { useShow } from '@/stores/Show'

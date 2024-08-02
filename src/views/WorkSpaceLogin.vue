@@ -31,7 +31,7 @@
             <EyeSlashIcon v-else class="h-5 w-5" />
           </button>
         </div>
-        <Button class="btn mt-[8%]">Connexion</Button>
+        <Button class="btn mt-[8%]" @click="testlogin()">Connexion</Button>
       </div>
       <div class="text">
         <p class="textbtn">Mot de passe oublié ?</p>
@@ -44,7 +44,10 @@
 import { EyeIcon, EyeSlashIcon } from '@heroicons/vue/24/solid'
 import { useShow } from '@/stores/Show'
 const show = useShow()
+function testlogin() {
+  show.showLogin = false
+  show.showAdmin = true
+}
 </script>
 
-<style scoped src="../styles/Login.css">
-</style>
+<style scoped src="../styles/Login.css"></style>
